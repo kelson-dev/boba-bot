@@ -9,6 +9,7 @@ var client = new DiscordSocketClient(client_config);
 
 client.MessageReceived += async (message) =>
 {
+    await Console.Out.WriteLineAsync($"[{DateTimeOffset.Now:f}] {message.GetJumpUrl()}");
     if (message is not SocketUserMessage user_message)
         return;
 
@@ -18,7 +19,9 @@ client.MessageReceived += async (message) =>
 };
 
 await client.LoginAsync(TokenType.Bot, key);
+await Console.Out.WriteLineAsync("Logged in");
 await client.StartAsync();
+await Console.Out.WriteLineAsync("Client started");
 await Console.In.ReadLineAsync();
 
 
