@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boba.Discord", "Boba.Discord\Boba.Discord.csproj", "{8A91646D-6302-44A5-A331-B62D3DC31C8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Discord", "Boba.Discord\Boba.Discord.csproj", "{8A91646D-6302-44A5-A331-B62D3DC31C8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boba.Config", "Boba.Config\Boba.Config.csproj", "{051C54E0-C48E-4866-8420-851304EC3BAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Config", "Boba.Config\Boba.Config.csproj", "{051C54E0-C48E-4866-8420-851304EC3BAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boba.Shop", "Boba.Shop\Boba.Shop.csproj", "{A7FC603D-B39B-4773-AE99-1D1B4C9AB260}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Shop", "Boba.Shop\Boba.Shop.csproj", "{A7FC603D-B39B-4773-AE99-1D1B4C9AB260}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boba.Shop.Tests", "Boba.Shop.Tests\Boba.Shop.Tests.csproj", "{FB5D2CB8-5EE6-4AD9-BEE4-0C9B1776E926}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boba.Shop.Tests", "Boba.Shop.Tests\Boba.Shop.Tests.csproj", "{FB5D2CB8-5EE6-4AD9-BEE4-0C9B1776E926}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

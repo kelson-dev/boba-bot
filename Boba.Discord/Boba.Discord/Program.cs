@@ -1,30 +1,26 @@
-﻿string key = await LoadKey();
+﻿using Boba.Discord;
+using Discord;
+using Discord.WebSocket;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
-DiscordSocketConfig client_config = new()
+string key = await LoadKey();
+
+DiscordSocketConfig client_config = new DiscordSocketConfig()
 {
     DefaultRetryMode = RetryMode.Retry502 | RetryMode.RetryTimeouts,
 };
 
 var client = new DiscordSocketClient(client_config);
 
-client.MessageReceived += async (message) =>
-{
-    await Console.Out.WriteLineAsync($"[{DateTimeOffset.Now:f}] {message.GetJumpUrl()}");
-    if (message is not SocketUserMessage user_message)
-        return;
-
-    if (user_message.MentionedUsers.Any(user => user.Id == client.CurrentUser.Id))
-        if (user_message.Content.Contains("ping"))
-            await user_message.ReplyAsync("pong");
-};
+new MyBot(client);
 
 await client.LoginAsync(TokenType.Bot, key);
 await Console.Out.WriteLineAsync("Logged in");
 await client.StartAsync();
 await Console.Out.WriteLineAsync("Client started");
 await Console.In.ReadLineAsync();
-
-
 
 static async Task<string> LoadKey()
 {
